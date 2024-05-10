@@ -23,7 +23,7 @@ function getName($n) {
 
 $mnk = getName($n);
 $rd = rand(0,999);
-$vvv = "Mozilla/5.0 (Linux; Android ) AppleWebKit/501 (KHTML, like Gecko) Chrome Mobile Safari Brave/".$mnk."";
+$vvv = "Mozilla/5.0 (Linux; Android ) AppleWebKit/501 (KHTML, like Gecko) Chrome Mobile Safari edge XX/".$mnk."";
 $xc = rand(1,100);
 $ipp = "61.6.25.".$xc."";
 
