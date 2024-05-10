@@ -25,7 +25,7 @@ $mnk = getName($n);
 $rd = rand(0,999);
 $vvv = "Mozilla/5.0 (Linux; Android ) AppleWebKit/501 (KHTML, like Gecko) Chrome Mobile Safari Brave/".$mnk."";
 $xc = rand(1,100);
-$ipp = "61.6.255.".$xc."";
+$ipp = "61.6.25.".$xc."";
 
 
 function ofer($url, $method, $data = null) {
