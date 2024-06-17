@@ -50,7 +50,7 @@ return $captcha;
 }
 function solveCaptcha(){
 	global $site, $vvv;
-a:
+ay:
 $login = "http://api.sctg.xyz/in.php?key=6Xb2iI4CenClVzEWLP0ScKbTJX0jJWDp&method=turnstile&sitekey=".$site."&json=1&pageurl=https://acryptominer.io/user/faucet";
 $ua[] = "User-Agent: ".$vvv."";
 $ua[] = "Content-Type: application/json";
@@ -65,8 +65,8 @@ $result = curl_exec($ch);
 
 $re = json_decode($result);
 $id = $re->request;
-if($id==''){goto a;}
-c:
+if($id==''){goto ay;}
+cy:
 $url = "https://temera88.000webhostapp.com/?key=6Xb2iI4CenClVzEWLP0ScKbTJX0jJWDp&id=".$id."";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -83,9 +83,9 @@ $hy = $rf->response;
 
 if ($hy == 'CAPCHA_NOT_READY') {          
         sleep(6);
-        goto c;
+        goto cy;
     }
-if($hy=="ERROR_CAPTCHA_UNSOLVABLE"){sleep(80);goto a;}
+if($hy=="ERROR_CAPTCHA_UNSOLVABLE"){sleep(80);goto ay;}
 
 $captcha = str_replace("OK|", "", $hy);
 curl_close($ch);
@@ -145,12 +145,13 @@ zz:
 $mnk = getName($n);
 $rd = rand(0,999);
 $vvv = "Mozilla/5.0 (Linux; Android) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36 X/".$mnk."";
-//$ipx = generateRandomIP();
+$ipx = generateRandomIP();
 
 $headers = [
        "Host: acryptominer.io",
         "content-type: application/x-www-form-urlencoded",
         "Connection: keep-alive",      
+        "X-Forwarded-For: $ipx",
         "user-agent: $vvv"
 ];
 
